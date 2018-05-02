@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/logon_wait"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/launcher"
+        android:layout_width="@dimen/widget_title_width03"
+        android:layout_height="@dimen/widget_title_width01"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/widget_button_height00"
+            android:layout_marginLeft="@dimen/alert_dialog_frame_margin"
+            android:layout_marginRight="@dimen/alert_dialog_frame_margin"
+            android:background="@drawable/common_searchbox_home_bg"
+            android:orientation="horizontal" >
+
+            <ImageView
+                style="@style/icon_middle"
+                android:src="@drawable/indoor_username" />
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/bottombar_button_margin05"
+                android:paddingTop="@dimen/bottombar_button_margin05"
+                android:src="@android:color/darker_gray" />
+
+            <com.ieds.gis.base.widget.checklist.SpinnerEditText
+                android:id="@+id/etUserName"
+                style="@style/widget_title"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/bottombar_button_margin05"
+                android:layout_weight="1"
+                android:background="@drawable/transparent"
+                android:hint="用户名"
+                android:singleLine="true"
+                android:textSize="@dimen/common_textsize_one" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/widget_button_height00"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/alert_dialog_frame_margin"
+            android:layout_marginRight="@dimen/alert_dialog_frame_margin"
+            android:background="@drawable/common_searchbox_home_bg"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <ImageView
+                style="@style/icon_middle"
+                android:src="@drawable/indoor_password" />
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/bottombar_button_margin05"
+                android:paddingTop="@dimen/bottombar_button_margin05"
+                android:src="@android:color/darker_gray" />
+
+            <com.ieds.gis.base.widget.checklist.SpinnerEditText
+                android:id="@+id/pwd_view"
+                style="@style/widget_title"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/bottombar_button_margin05"
+                android:layout_weight="1"
+                android:background="@drawable/transparent"
+                android:hint="密码"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textSize="@dimen/common_textsize_one" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical" >
+
+        <com.ieds.gis.base.widget.SubmitInspectButton
+            android:id="@+id/login"
+            style="@style/common_button.normal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/widget_button_height99"
+            android:layout_marginLeft="@dimen/alert_dialog_frame_margin"
+            android:layout_marginRight="@dimen/alert_dialog_frame_margin"
+            android:text="登录" />
+    </LinearLayout>
+
+</LinearLayout>
